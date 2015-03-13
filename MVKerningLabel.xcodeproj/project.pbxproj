@@ -13,6 +13,7 @@
 		656035571AB307E70038FB81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656035561AB307E70038FB81 /* Images.xcassets */; };
 		6560355A1AB307E70038FB81 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656035581AB307E70038FB81 /* LaunchScreen.xib */; };
 		656035661AB307E70038FB81 /* MVKerningLabelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656035651AB307E70038FB81 /* MVKerningLabelTests.swift */; };
+		656035701AB307FF0038FB81 /* MVKerningLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6560356F1AB307FF0038FB81 /* MVKerningLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		6560355F1AB307E70038FB81 /* MVKerningLabelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVKerningLabelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		656035641AB307E70038FB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		656035651AB307E70038FB81 /* MVKerningLabelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVKerningLabelTests.swift; sourceTree = "<group>"; };
+		6560356F1AB307FF0038FB81 /* MVKerningLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVKerningLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		6560354C1AB307E70038FB81 /* MVKerningLabel */ = {
 			isa = PBXGroup;
 			children = (
+				6560356F1AB307FF0038FB81 /* MVKerningLabel.swift */,
 				6560354F1AB307E70038FB81 /* AppDelegate.swift */,
 				656035511AB307E70038FB81 /* ViewController.swift */,
 				656035531AB307E70038FB81 /* Main.storyboard */,
@@ -214,6 +217,7 @@
 			files = (
 				656035521AB307E70038FB81 /* ViewController.swift in Sources */,
 				656035501AB307E70038FB81 /* AppDelegate.swift in Sources */,
+				656035701AB307FF0038FB81 /* MVKerningLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

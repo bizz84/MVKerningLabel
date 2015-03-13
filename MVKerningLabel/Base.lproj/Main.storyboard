@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVKerningLabel" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,85 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a normal text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oz2-mU-bBt" customClass="MVKerningLabel" customModule="MVKerningLabel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="58" width="600" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is some wider text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pP7-gg-fxG" customClass="MVKerningLabel" customModule="MVKerningLabel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="124" width="600" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="kerning">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is some very wide text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTI-Zq-CLI" customClass="MVKerningLabel" customModule="MVKerningLabel" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="200" width="600" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="kerning">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43z-yJ-ZvR" customClass="MVKerningLabel" customModule="MVKerningLabel" customModuleProvider="target">
+                                <rect key="frame" x="16" y="313" width="568" height="101"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="r40-VI-9cp">
+                                <rect key="frame" x="198" y="273" width="204" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="yBf-dJ-Q7w"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="1B7-XS-u5j"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="pP7-gg-fxG" secondAttribute="centerX" id="3kX-RM-S9W"/>
+                            <constraint firstItem="43z-yJ-ZvR" firstAttribute="top" secondItem="kTI-Zq-CLI" secondAttribute="bottom" constant="70" id="4Ls-gK-HTJ"/>
+                            <constraint firstItem="Oz2-mU-bBt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="6g7-ps-Vxc"/>
+                            <constraint firstItem="43z-yJ-ZvR" firstAttribute="top" secondItem="r40-VI-9cp" secondAttribute="bottom" constant="10" id="GFF-Ur-BeF"/>
+                            <constraint firstItem="kTI-Zq-CLI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="I1L-RE-nLL"/>
+                            <constraint firstAttribute="centerX" secondItem="r40-VI-9cp" secondAttribute="centerX" id="IxO-3R-Lpd"/>
+                            <constraint firstItem="pP7-gg-fxG" firstAttribute="top" secondItem="Oz2-mU-bBt" secondAttribute="bottom" constant="44" id="JCc-0F-mfz"/>
+                            <constraint firstAttribute="trailing" secondItem="pP7-gg-fxG" secondAttribute="trailing" id="QFb-cn-Pg0"/>
+                            <constraint firstItem="pP7-gg-fxG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aNY-w8-Aio"/>
+                            <constraint firstAttribute="trailing" secondItem="Oz2-mU-bBt" secondAttribute="trailing" id="aNx-na-FvW"/>
+                            <constraint firstItem="43z-yJ-ZvR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="cRl-wC-9JR"/>
+                            <constraint firstAttribute="centerX" secondItem="kTI-Zq-CLI" secondAttribute="centerX" id="jQo-ZT-x9w"/>
+                            <constraint firstAttribute="trailing" secondItem="43z-yJ-ZvR" secondAttribute="trailing" constant="16" id="p1b-JM-Xri"/>
+                            <constraint firstItem="r40-VI-9cp" firstAttribute="top" secondItem="kTI-Zq-CLI" secondAttribute="bottom" constant="51" id="sx0-K5-PwP"/>
+                            <constraint firstAttribute="trailing" secondItem="kTI-Zq-CLI" secondAttribute="trailing" id="tXw-79-Cry"/>
+                            <constraint firstItem="kTI-Zq-CLI" firstAttribute="top" secondItem="pP7-gg-fxG" secondAttribute="bottom" constant="55" id="tbR-zy-rwa"/>
+                            <constraint firstItem="Oz2-mU-bBt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xlC-Kq-adE"/>
+                            <constraint firstAttribute="centerX" secondItem="Oz2-mU-bBt" secondAttribute="centerX" id="ygb-Mp-bsV"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ygb-Mp-bsV"/>
+                                <exclude reference="3kX-RM-S9W"/>
+                                <exclude reference="jQo-ZT-x9w"/>
+                                <exclude reference="4Ls-gK-HTJ"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="loremIpsumLabel" destination="43z-yJ-ZvR" id="OAj-QS-Ytz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
